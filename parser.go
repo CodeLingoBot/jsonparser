@@ -634,6 +634,11 @@ Del - Receives existing data structure, path to delete.
 Returns:
 `data` - return modified data
 
+*/Del - Receives existing data structure, path to delete.
+
+Returns:
+`data` - return modified data
+
 */
 func Delete(data []byte, keys ...string) []byte {
 	lk := len(keys)
@@ -1189,7 +1194,7 @@ func ParseString(b []byte) (string, error) {
 	}
 }
 
-// ParseNumber parses a Number ValueType into a Go float64
+// ParseFloat parses a Number ValueType into a Go float64
 func ParseFloat(b []byte) (float64, error) {
 	if v, err := parseFloat(&b); err != nil {
 		return 0, MalformedValueError
